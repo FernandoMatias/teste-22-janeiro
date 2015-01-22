@@ -2,7 +2,7 @@ Ext.define('Touch2Demo.controller.Main', {
     extend: 'Ext.app.Controller',
     config: {
 	routes: {
-	    '': 'validacaoInicial',
+	    '': 'showMenuIniciar',
 	    'index.html': 'validacaoInicial'
 	},
 	refs: {
@@ -273,7 +273,7 @@ Ext.define('Touch2Demo.controller.Main', {
 	    });
 	});
 	Ext.Msg.confirm(
-		'Sincronização',
+		'SincronizaÃ§Ã£o',
 		'Deseja sincronizar os contatos?',
 		function (btn) {
 		    if (btn == 'yes') {
