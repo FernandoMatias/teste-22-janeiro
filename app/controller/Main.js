@@ -2,7 +2,7 @@ Ext.define('Touch2Demo.controller.Main', {
     extend: 'Ext.app.Controller',
     config: {
 	routes: {
-	    '': 'showMenuIniciar',
+	    '': 'validacaoInicial',
 	    'index.html': 'validacaoInicial'
 	},
 	refs: {
@@ -568,8 +568,10 @@ Ext.define('Touch2Demo.controller.Main', {
 	var verUsuario = Ext.create('Touch2Demo.store.Contato'),
 		verFunc = verUsuario.data.get(1);
 	if (verFunc == null) {
+		 Ext.Msg.alert('login', 'teste 1', Ext.emptyFn);
 	    this.sincronizacaoInicial();
 	} else {
+		  Ext.Msg.alert('login', 'teste 2', Ext.emptyFn);
 	    this.irLoginForm();
 	}
     },
