@@ -86,7 +86,7 @@ Ext.define('Touch2Demo.view.MenuIniciar', {
 		xtype: 'button',
 		action: 'configurar',
 		height: 75,
-		text: 'Configurações'
+		text: 'ConfiguraÃ§Ãµes'
 	    },
 	    {
 		xtype: 'container',
@@ -98,6 +98,13 @@ Ext.define('Touch2Demo.view.MenuIniciar', {
 		action: 'sairUsuario',
 		height: 75,
 		text: 'Sair'
+	    },
+	      {
+		xtype: 'button',
+		ui: 'decline',
+		action: 'teste',
+		height: 75,
+		text: 'teste'
 	    }
 	]
     }
