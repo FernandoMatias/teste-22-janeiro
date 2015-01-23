@@ -556,22 +556,29 @@ Ext.define('Touch2Demo.controller.Main', {
 	});
     },
     validacaoInicial: function () {
-	var verLogin = Ext.create('Touch2Demo.store.usuarioLogado_s'),
-		usuarioSalvo = verLogin.data.get(1);
-	if (usuarioSalvo == null) {
+	var verLogin = Ext.getStore('usuarioLogado_s');
+	var t = 0;
+	verLogin.each(function () {
+	    usuarioSalvo10 = verLogin.data.get(t);
+	    t++;
+	});
+	if (t <= 0) {
 	    this.verificaUsuario();
 	} else {
-	    this.showMenuIniciar()
+	    this.showMenuIniciar();
 	}
+
     },
     verificaUsuario: function () {
-	var verUsuario = Ext.create('Touch2Demo.store.Contato'),
-		verFunc = verUsuario.data.get(1);
-	if (verFunc == null) {
-		 Ext.Msg.alert('login', 'teste 1', Ext.emptyFn);
+	var verUsuario = Ext.getStore('Contatos');
+	var w = 0;
+	verUsuario.each(function () {
+	    verFunc = verUsuario.data.get(w);
+	    w++;
+	});
+	if (w <= 0) {
 	    this.sincronizacaoInicial();
 	} else {
-		  Ext.Msg.alert('login', 'teste 2', Ext.emptyFn);
 	    this.irLoginForm();
 	}
     },
